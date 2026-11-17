@@ -1,4 +1,13 @@
+## 🌐 Live Deployment
 
+**Live Frontend:**  
+https://network-bandwidth-frontend.onrender.com
+
+**Backend API:**  
+https://network-bandwidth-backend.onrender.com
+
+**Health Check:**  
+https://network-bandwidth-backend.onrender.com/api/health
 # Network Bandwidth Anomaly Detection System
 
 A web-based network bandwidth monitoring system that identifies unusual bandwidth usage using a Finite State Machine (FSM).
