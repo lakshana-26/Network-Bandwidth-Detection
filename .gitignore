@@ -1,0 +1,54 @@
+# ============================================================================
+# Network Bandwidth Usage Anomaly Detection System
+# Root .gitignore
+# ============================================================================
+
+# 1. Dependencies
+node_modules/
+*/node_modules/
+
+# 2. Environment Variables & Secrets (CRITICAL SECURITY RULE)
+.env
+.env.local
+.env.*.local
+*.env
+server/.env
+client/.env
+
+# Explicitly allow safe example templates
+!.env.example
+!server/.env.example
+!client/.env.example
+
+# 3. Build & Compilation Outputs
+dist/
+client/dist/
+build/
+client/build/
+*.tsbuildinfo
+
+# 4. Vite & Framework Caches
+.vite/
+client/.vite/
+client/node_modules/.vite/
+.cache/
+
+# 5. Diagnostic & Process Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 6. Operating System & Editor Artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 7. Local Scratch & Temporary Directories
+tmp/
+temp/
