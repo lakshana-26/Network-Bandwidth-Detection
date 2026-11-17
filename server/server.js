@@ -32,7 +32,22 @@ const PORT = process.env.PORT || 5000;
 // ----------------------------------------------------------------------------
 
 // Enable Cross-Origin Resource Sharing (CORS) for frontend requests
-app.use(cors());
+const clientOrigin = process.env.CLIENT_ORIGIN;
+if (clientOrigin) {
+  const allowedOrigins = clientOrigin.split(',').map(o => o.trim());
+  app.use(cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(null, true);
+      }
+    },
+    credentials: true
+  }));
+} else {
+  app.use(cors());
+}
 
 // Enable built-in JSON body parser for incoming API requests
 app.use(express.json());
